@@ -311,7 +311,7 @@
   .sec-head-split h2{font-size:clamp(28px,3.6vw,42px);margin-top:14px;}
   .sec-head-split h2.h2-bold{font-weight:900;}
   .sec-head-split p{color:var(--ink-soft);margin-top:0;font-size:16.5px;max-width:52ch;}
-  @media (min-width:760px){ .sec-head-split.reverse{grid-template-columns:1.15fr 0.85fr;} }
+  @media (min-width:760px){ .sec-head-split.reverse{grid-template-columns:1.15fr 0.85fr;} .sec-head-split.reverse > p{order:2;} .sec-head-split.reverse > div{order:1;} }
 
   .about-grid{display:grid;grid-template-columns:1fr;gap:36px;}
   @media (min-width:900px){ .about-grid{grid-template-columns:1.3fr 0.7fr;align-items:start;} }
@@ -660,11 +660,11 @@
 
   <section id="platforms" class="wrap" style="margin-top:48px;">
     <div class="sec-head-split reverse" data-reveal>
-      <p>Growing your business online is complicated. You don't need multiple agencies to manage it. We bring your marketplaces, advertising, and lead generation together under one experienced team, so you can focus on running your business.</p>
       <div>
         <span class="eyebrow">Where we operate</span>
         <h2>Our Platform Expertise.</h2>
       </div>
+      <p>Growing your business online is complicated. You don't need multiple agencies to manage it. We bring your marketplaces, advertising, and lead generation together under one experienced team, so you can focus on running your business.</p>
     </div>
     <div class="platform-panel glass" data-reveal>
       <div class="platform-col">
