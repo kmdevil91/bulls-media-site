@@ -301,7 +301,7 @@
 
   /* ---------- SECTION HEADS ---------- */
   section{padding:128px 0;}
-  #platforms, #services, #process, #results, #contact{border-top:1px solid var(--line);}
+  #platforms, #services, #process, #results, #contact, #work, #case-studies{border-top:1px solid var(--line);}
   .sec-head{max-width:640px;margin-bottom:52px;}
   .sec-head h2{font-size:clamp(28px,3.6vw,42px);margin-top:14px;}
   .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:16.5px;max-width:58ch;}
@@ -410,6 +410,30 @@
   .channel-card .ch-metric{font-family:var(--display);font-size:30px;margin-top:10px;font-weight:700;}
   .channel-card .ch-sub{font-size:13px;color:var(--ink-faint);margin-top:4px;}
 
+  /* ---------- OUR WORK ---------- */
+  .work-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:44px;}
+  @media (min-width:640px){ .work-grid{grid-template-columns:1fr 1fr;} }
+  @media (min-width:1024px){ .work-grid{grid-template-columns:repeat(3,1fr);} }
+  .work-card{border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;gap:14px;}
+  .work-card .work-tag{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;}
+  .work-card h4{font-family:var(--display);font-size:19px;line-height:1.25;margin:0;}
+  .work-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin:0;}
+  .work-card .work-result{display:flex;align-items:baseline;gap:8px;padding-top:12px;border-top:1px solid var(--glass-border);margin-top:auto;}
+  .work-card .work-result .v{font-family:var(--mono);font-weight:700;font-size:19px;color:var(--accent);font-variant-numeric:tabular-nums;}
+  .work-card .work-result .k{font-size:12.5px;color:var(--ink-faint);}
+
+  /* ---------- CASE STUDIES ---------- */
+  .case-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:44px;}
+  @media (min-width:900px){ .case-grid{grid-template-columns:repeat(2,1fr);} }
+  .case-card{border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:16px;}
+  .case-card .case-tag{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);font-weight:600;}
+  .case-card h4{font-family:var(--display);font-size:22px;line-height:1.28;margin:0;}
+  .case-card .case-block{font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  .case-card .case-block strong{color:var(--ink);font-weight:700;}
+  .case-card .case-stats{display:flex;gap:24px;padding-top:16px;border-top:1px solid var(--glass-border);margin-top:auto;}
+  .case-card .case-stats .v{font-family:var(--mono);font-weight:700;font-size:22px;color:var(--accent);font-variant-numeric:tabular-nums;display:block;}
+  .case-card .case-stats .k{font-size:12px;color:var(--ink-faint);}
+
   /* ---------- CTA ---------- */
   .cta-panel{
     border-radius:36px;
@@ -460,6 +484,8 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#results">Results</a>
+      <a href="#work">Our Work</a>
+      <a href="#case-studies">Case Studies</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="btn btn-accent">Book a growth audit</a>
@@ -865,10 +891,68 @@
     </div>
   </section>
 
+  <section id="work" class="wrap" style="margin-top:48px;">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Our work</span>
+      <h2>A sample of accounts we run.</h2>
+      <p>A cross-section of the marketplaces and lead channels our team is actively managing.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card glass" data-reveal>
+        <span class="work-tag">D2C Fashion · Amazon &amp; Flipkart</span>
+        <h4>Marketplace relaunch for a footwear brand</h4>
+        <p>Rebuilt catalog structure, fixed Brand Registry issues, and rebalanced ad spend across Sponsored Products and Sponsored Brands.</p>
+        <div class="work-result"><span class="v">2.1×</span><span class="k">revenue in 6 months</span></div>
+      </div>
+      <div class="work-card glass" data-reveal>
+        <span class="work-tag">Consumer Electronics · Meta &amp; Google</span>
+        <h4>Lead pipeline for a home-appliance brand</h4>
+        <p>Stood up a full-funnel Meta and Google Ads program, feeding qualified leads into the client's sales team weekly.</p>
+        <div class="work-result"><span class="v">3.4×</span><span class="k">qualified leads per month</span></div>
+      </div>
+      <div class="work-card glass" data-reveal>
+        <span class="work-tag">Beauty &amp; Personal Care · Blinkit &amp; Zepto</span>
+        <h4>Quick-commerce launch and visibility push</h4>
+        <p>Onboarded the brand across quick-commerce platforms and ran category-ranking and promotional strategy from day one.</p>
+        <div class="work-result"><span class="v">40%</span><span class="k">share of category impressions</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-studies" class="wrap" style="margin-top:48px;">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Case studies</span>
+      <h2>Where the numbers came from.</h2>
+      <p>Two engagements, start to finish — the problem, what we changed, and what moved.</p>
+    </div>
+    <div class="case-grid">
+      <div class="case-card glass" data-reveal>
+        <span class="case-tag">B2B SaaS · LinkedIn Ads</span>
+        <h4>Cutting cost per SQL for a B2B SaaS client</h4>
+        <p class="case-block"><strong>Challenge:</strong> Lead volume was healthy but sales rejected most of it — targeting was too broad and forms were capturing the wrong titles.</p>
+        <p class="case-block"><strong>Approach:</strong> Rebuilt campaigns around account-based lists, swapped broad job-title targeting for named accounts, and tightened lead-gen form fields to pre-qualify.</p>
+        <div class="case-stats">
+          <div><span class="v">−27%</span><span class="k">Cost per SQL</span></div>
+          <div><span class="v">1.9×</span><span class="k">Sales-accepted leads</span></div>
+        </div>
+      </div>
+      <div class="case-card glass" data-reveal>
+        <span class="case-tag">Home &amp; Kitchen · Amazon</span>
+        <h4>Recovering ACOS on a stalled Amazon account</h4>
+        <p class="case-block"><strong>Challenge:</strong> ACOS had crept up over two quarters as the catalog grew, with budget still spread evenly across winning and losing SKUs.</p>
+        <p class="case-block"><strong>Approach:</strong> Restructured campaigns by SKU performance tier, shifted budget toward Sponsored Brands on top sellers, and added negative keywords weekly.</p>
+        <div class="case-stats">
+          <div><span class="v">31%</span><span class="k">ACOS reduction</span></div>
+          <div><span class="v">1.6×</span><span class="k">Profitable ad spend</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="wrap" style="margin-top:48px;">
     <div class="cta-panel glass" data-reveal>
       <div>
-        <span class="eyebrow">Start here</span>
+        <span class="eyebrow">Contact us</span>
         <h2>Get a free growth audit of your current spend.</h2>
         <p>Send us access to one live account — Amazon, Meta, Google or LinkedIn — and we'll return a written teardown of where budget is leaking within 5 working days. No retainer required to see it.</p>
       </div>
